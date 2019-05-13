@@ -15,9 +15,10 @@ public class OrderController {
     @Autowired private OrderService orderService;
 
     @GetMapping("/create/{user}/{product}")
-    public HashMap<String, Object> createOrder(@PathVariable("user") String user, @PathVariable("product") String product) {
-
-        return orderService.createOrder(user, product);
+    public HashMap<String, Object> createOrder(@PathVariable("user") String user, @PathVariable("product") String product) throws InterruptedException {
+        orderService.createOrder(user, product);
+        Thread.sleep(7000);
+        return orderService.createErrorOrder(user, product);
     }
 
     @GetMapping("/create/error/{user}/{product}")

@@ -27,9 +27,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public String getUser(String user) throws InterruptedException {
-        int millis = this.random.nextInt(1000);
-        Thread.sleep(this.random.nextInt(millis));
-        this.tracer.currentSpan().tag("random-sleep-millis", String.valueOf(millis));
+//        int millis = this.random.nextInt(1000);
+
+//        this.tracer.currentSpan().tag("random-sleep-millis", String.valueOf(millis));
         return (String) data.get(user);
     }
 }

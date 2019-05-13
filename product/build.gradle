@@ -18,7 +18,7 @@ ext {
 }
 
 dependencies {
-//	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-sleuth', version: '2.1.1.RELEASE'
+	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-sleuth', version: '2.1.1.RELEASE'
 
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.cloud:spring-cloud-starter-zipkin'

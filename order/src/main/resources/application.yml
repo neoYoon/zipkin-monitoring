@@ -3,12 +3,12 @@ spring:
     name: order
   zipkin:
     base-url: http://localhost:9411/
-#  sleuth:
-#    enabled: true
-#    sampler:
-#      probability: 1.0
-#sample:
-#  zipkin:
-#    enabled: true
+  sleuth:
+    enabled: true
+    sampler:
+      probability: 1.0
+sample:
+  zipkin:
+    enabled: true
 server:
   port: 8083
